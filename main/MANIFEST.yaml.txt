@@ -1,0 +1,14 @@
+project:
+  name: chaos-image-encryption-dna
+  matlab_version: R2023b
+  os: Windows 10
+  entry_points:
+    - scripts/example_file.m
+  outputs:
+    - cipher_image (uint8, HxWxC)
+    - encoded_image (DNA: A/C/G/T 或 0..3 或打包字节)
+    - exports/*.fasta
+    - exports/*.csv
+  notes:
+    - 使用六维混沌系统生成三路密钥流：置乱/扩散/DNA规则
+    - 可切换为 IS-map 版本的 generate_chaotic_quence.m
